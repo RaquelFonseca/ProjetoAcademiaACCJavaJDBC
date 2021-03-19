@@ -23,10 +23,11 @@ public class Teste {
 	public static void main(String[] args) {
 		
 		// Alunas
-		Curso curso1 = new Curso(1, "Ciência da Computação");
+		Curso curso1 = new Curso(1.0, "Ciência da Computação");
 		Pessoa fulana = new Aluno("Fulana de Tal", "000.000.000-00", 20, curso1);
 		Pessoa cicrana = new Aluno("Cicrana de Tal", "111.111.111-11", 21, curso1);
 		Pessoa beltrana = new Aluno("Beltrana de Tal", "222.222.222-22", 23, curso1);
+
 
 		// Professores
 		Pessoa professor = new Professor("Professor", "999.999.999-99", 40, 10000.00);
@@ -34,7 +35,10 @@ public class Teste {
 
 		SistemaAcademicoDAO db = new SistemaAcademicoDAO();
 		
-		// adicionar pessoas nas tabela aluno e professor
+		//adiciona curso
+		//db.inserirCurso(curso1);
+		
+		// adicionar pessoas nas tabela alunos e professores
 		/*db.inserirPessoa(fulana);
 		db.inserirPessoa(cicrana);
 		db.inserirPessoa(beltrana);
@@ -48,10 +52,6 @@ public class Teste {
 		// COnsultas
 		/*db.procuraProfessor("999.999.999-99");
 		db.procuraAluno("000.000.000-00");*/
-		
-		//for(Contato c : contatoDao.getContatos()) {
-			//System.out.println("Contato: "+c.getNome());
-		//}
 		
 		/*try {
 			for (Pessoa aluno: db.getAlunos()) {
